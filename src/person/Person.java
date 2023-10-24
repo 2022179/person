@@ -57,6 +57,10 @@ public class Person {
             }
             teams.add(team);
             
+            for (Team team : teams) {
+            System.out.println(team);
+        }
+            
         
                     
         }

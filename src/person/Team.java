@@ -24,10 +24,10 @@ class Team {
         this.members = members;
     }
    
-    
-//    public void addMember(ArrayList<Member> person) {
-//        members.add(person);
-//    }
+    //ArrayList<Member>
+    public void addMember(Person person) {
+        members.add(person);
+    }
 // getters added
     public String getName() {
         return name;
