@@ -40,9 +40,9 @@ class Team {
     @Override
     public String toString() {
           StringBuilder builder = new StringBuilder();
-        builder.append("Team: ").append(name).append("\n");
-        for (Person member : members) {
-            builder.append("  ").append(member).append("\n");
+          builder.append("Team: ").append(name).append("\n");
+          for (Person member : members) {
+          builder.append("  ").append(member).append("\n");
         }
         return builder.toString();
     }

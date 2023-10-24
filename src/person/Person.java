@@ -22,7 +22,7 @@ public class Person {
      */
     public static void main(String[] args) throws FileNotFoundException {
         
-        ArrayList<Member> member = new ArrayList<>();//arrayList
+        ArrayList<Member> member = new ArrayList<>();//
         
         ArrayList<Team> teams = new ArrayList<>();
         
@@ -56,7 +56,7 @@ public class Person {
             teams.add(team);
             
         System.out.println(team.getName() + ":");
-            for (Person member : team.getperson()) {
+            for(Person member : team.getperson()) {
                 System.out.println("- " + member.getFirstName() + " " + member.getLastName());
             }
             System.out.println();
