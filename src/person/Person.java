@@ -22,7 +22,7 @@ public class Person {
      */
     public static void main(String[] args) throws FileNotFoundException {
         
-        ArrayList<Member> member = new ArrayList<>();
+        ArrayList<Member> member = new ArrayList<>();//arrayList
         
         ArrayList<Team> teams = new ArrayList<>();
         
