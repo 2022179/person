@@ -26,7 +26,7 @@ public class Person {
         
         ArrayList<Team> teams = new ArrayList<>();
         
-      try( BufferedReader br = new BufferedReader(new FileReader("MOCK_DATA.csv"))){
+      try( BufferedReader br = new BufferedReader(new FileReader("MOCK_DATA.csv"))){// added file
           String line;
           while((line = br.readLine())!=null){
               String[]parts =line.split(",");
@@ -38,33 +38,40 @@ public class Person {
               
           }
           
-      }catch(IOException e){
+      }catch(IOException e){//try catch code
           e.printStackTrace();
           
       }
-        Collections.shuffle(member);
+        Collections.shuffle(member);// grouping names of teams
         for (int i = 1; i <= 20; i++) {
            Team team = new Team("Team " + i);
-            // number ffrom 1-100 set in this code
-            // you can code it like this 
-            // for(int num =1; num <=100; num ++){
-            //numSet.add(num)
+           
             for (int j = 0; j < 5; j++) {
-//               // Person person = Team.remove(0); // Remove the first person from the shuffled list
+               // Person person = Team.remove(0); // Remove the first person from the shuffled list
             Member members = member.remove(0);
-                team.addMember(member);
+               Person person = null;
+                team.addMember(person);
                 
             }
             teams.add(team);
             
-            for (Team team : teams) {
-            System.out.println(team);
-        }
-            
+        System.out.println(team.getName() + ":");
+            for (Person member : team.getperson()) {
+                System.out.println("- " + member.getFirstName() + " " + member.getLastName());
+            }
+            System.out.println();
         
                     
         }
         // TODO code application logic here
+    }
+
+    private String getFirstName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private String getLastName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     }
 
