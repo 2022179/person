@@ -19,15 +19,15 @@ class Team {
     private ArrayList<Person>members;
 //constructor
 
-    public Team(String name, ArrayList<Person> members) {
+    public Team(String name) {
         this.name = name;
         this.members = members;
     }
    
     
-    public void addMember(Person person) {
-        members.add(person);
-    }
+//    public void addMember(ArrayList<Member> person) {
+//        members.add(person);
+//    }
 // getters added
     public String getName() {
         return name;

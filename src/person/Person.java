@@ -28,7 +28,7 @@ public class Person {
         
       try( BufferedReader br = new BufferedReader(new FileReader("MOCK_DATA.csv"))){
           String line;
-          while((line= br.readLine()!=null)){
+          while((line = br.readLine())!=null){
               String[]parts =line.split(",");
               int id =Integer.parseInt(parts[0]);
               String firstName = parts[1];
@@ -43,18 +43,24 @@ public class Person {
           
       }
         Collections.shuffle(member);
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 20; i++) {
            Team team = new Team("Team " + i);
             // number ffrom 1-100 set in this code
             // you can code it like this 
             // for(int num =1; num <=100; num ++){
             //numSet.add(num)
             for (int j = 0; j < 5; j++) {
-                Person person = Team.remove(0); // Remove the first person from the shuffled list
-                team.addMember(person);
+//               // Person person = Team.remove(0); // Remove the first person from the shuffled list
+            Member members = member.remove(0);
+                team.addMember(member);
+                
+            }
+            teams.add(team);
             
         
+                    
+        }
         // TODO code application logic here
     }
-    
-}
+    }
+
